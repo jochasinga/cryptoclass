@@ -51,4 +51,21 @@ adversary who:
 
 can't produce a verifiable signature on another message
 
+## Practical stuff
+
+- algorithms are randomized -> need good source of randomness (high min-entropy set)
+- limit on message size -> fix: use Hash(message) rather than message
+- fun trick: sign a hash pointer; signature "covers" the whole structure
+
+## Bitcoin 
+
+Bitcoin uses [ECDSA][1] (Elliptic Curve Digital Signature Algorithm), NIST standard
+
+relies on hairy math
+
+Again, good source of randomness is important.
+
+
+[1]: https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm
+
 
